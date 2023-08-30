@@ -1,0 +1,10 @@
+Document: zycore
+Title: Zycore API documentation
+Author: zyantific <contact@zyantific.com>
+Abstract: Zyan Core (or zycore) is an internal library providing platform
+ independent types, macros and a fallback for environments without LibC.
+Section: Programming/C
+
+Format: HTML
+Index: /usr/share/doc/libzycore-doc/api/index.html
+Files: /usr/share/doc/libzycore-doc/api/*.html

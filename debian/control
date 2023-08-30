@@ -1,15 +1,52 @@
-Source: template-repository
-Section: unknown
+Source: zycore-c
+Section: libs
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Maintainer: Andrea Pappacoda <andrea@pappacoda.it>
+Build-Depends: debhelper-compat (= 13)
+Build-Depends-Arch: cmake,
+                    libgtest-dev <!nocheck>
+Build-Depends-Indep: cmake,
+                     libgtest-dev <!nocheck>,
+                     doxygen <!nodoc>,
+                     graphviz <!nodoc>
+Standards-Version: 4.6.1
+Homepage: https://github.com/zyantific/zycore-c
+Vcs-Git: https://salsa.debian.org/debian/zycore-c.git
+Vcs-Browser: https://salsa.debian.org/debian/zycore-c
+Rules-Requires-Root: no
 
-Package: template-repository
+Package: libzycore1.4
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Multi-Arch: same
+Depends: ${misc:Depends},
+         ${shlibs:Depends}
+Description: Zyan Core Library for C
+ Zyan Core is an internal library providing platform independent types,
+ macros and a fallback for environments without LibC.
+ .
+ This package contains the shared library.
+
+Package: libzycore-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends: libzycore1.4 (= ${binary:Version}),
+         ${misc:Depends}
+Recommends: libzycore-doc
+Description: Zyan Core Library for C - development
+ Zyan Core is an internal library providing platform independent types,
+ macros and a fallback for environments without LibC.
+ .
+ This package contains the development files.
+
+Package: libzycore-doc
+Section: doc
+Architecture: all
+Multi-Arch: foreign
+Depends: libjs-jquery,
+         ${misc:Depends}
+Description: Zyan Core Library for C - documentation
+ Zyan Core is an internal library providing platform independent types,
+ macros and a fallback for environments without LibC.
+ .
+ This package contains the generated Doxygen documentation.
