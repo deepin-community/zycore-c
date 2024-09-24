@@ -1,5 +1,6 @@
-template-repository (1.0-1) unstable; urgency=medium
+zycore-c (1.5.0-1) unstable; urgency=medium
 
-  * Initial release
+  * Init && sync with upstream
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Alphagocc <alphagocc@163.com>  Tue, 24 Sep 2024 18:15:54 +0800
+
