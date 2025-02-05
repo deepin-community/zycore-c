@@ -6,14 +6,26 @@ export DEB_BUILD_MAINT_OPTIONS = hardening=+all optimize=-lto qa=+all
 %:
 	dh $@
 
+ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
+  test := true
+else
+  test := false
+endif
+
 override_dh_auto_configure:
 	dh_auto_configure -- \
 		-DBUILD_SHARED_LIBS=ON \
 		-DZYAN_WHOLE_PROGRAM_OPTIMIZATION=ON \
-		-DZYCORE_BUILD_SHARED_LIB=ON 
+		-DZYCORE_BUILD_SHARED_LIB=ON \
+		-DZYCORE_BUILD_TESTS=$(test)
 
 override_dh_installdocs-indep:
 	dh_installdocs --indep --doc-main-package=libzycore-doc
 
 override_dh_installexamples-indep:
 	dh_installexamples --indep --doc-main-package=libzycore-doc
+
+ifeq (,$(filter nodoc,$(DEB_BUILD_OPTIONS)))
+execute_after_dh_installdocs-indep:
+	dh_doxygen --indep
+endif
