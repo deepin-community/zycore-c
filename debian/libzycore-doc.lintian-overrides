@@ -1,0 +1,5 @@
+# Doxygen generates imperfect man pages, there's not much I can do about it.
+libzycore-doc: bad-whatis-entry
+
+# Doxygen generates imperfect man pages, there's not much I can do about it.
+libzycore-doc: groff-message

@@ -1,6 +1,118 @@
-zycore-c (1.5.0-1) unstable; urgency=medium
+zycore-c (1.5.1-1) unstable; urgency=low
 
-  * Init && sync with upstream
+  * New upstream version 1.5.1
+  * Upload to unstable
+  * First dgit upload
+  * d/control: apply X-Style: black
+  * d/control: declare dpkg-build-api = 1
+  * d/.symbols: add missing Build-Depends-Package.
+    Thanks to Bastian for the report!
 
- -- Alphagocc <alphagocc@163.com>  Tue, 24 Sep 2024 18:15:54 +0800
+ -- Andrea Pappacoda <andrea@pappacoda.it>  Tue, 14 Jan 2025 22:48:30 +0100
 
+zycore-c (1.5.0-1) experimental; urgency=medium
+
+  * New upstream version 1.5.0
+  * d/control: libzycore1.4t64 -> libzycore1.5
+  * d/libzycore-doc.manpages: install manpages
+  * d/patches: drop upstreamed patches
+
+ -- Andrea Pappacoda <andrea@pappacoda.it>  Sun, 10 Mar 2024 12:47:38 +0100
+
+zycore-c (1.4.1-2.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Rename libraries for 64-bit time_t transition.  Closes: #1063314
+
+ -- Steve Langasek <vorlon@debian.org>  Thu, 29 Feb 2024 08:50:24 +0000
+
+zycore-c (1.4.1-2) unstable; urgency=medium
+
+  * d/patches: add loong64 support.
+    Thanks to wuruilong for the patch! (Closes: #1059604)
+
+ -- Andrea Pappacoda <andrea@pappacoda.it>  Fri, 12 Jan 2024 22:24:00 +0100
+
+zycore-c (1.4.1-1) unstable; urgency=medium
+
+  * New upstream version 1.4.1
+  * Upload to unstable
+
+ -- Andrea Pappacoda <andrea@pappacoda.it>  Sun, 20 Nov 2022 16:42:22 +0100
+
+zycore-c (1.4.0-1) experimental; urgency=medium
+
+  * New upstream version 1.4.0
+  * d/control: libzycore1.2 -> libzycore1.4
+  * d/control: add new libzycore-doc package
+  * d/control: build on any architecture (Closes: #1015787)
+  * d/patches: drop upstreamed patches
+
+ -- Andrea Pappacoda <andrea@pappacoda.it>  Sun, 06 Nov 2022 23:24:02 +0100
+
+zycore-c (1.2.0-2) unstable; urgency=medium
+
+  * Upload to unstable
+  * d/patches: build Doxygen documentation
+
+ -- Andrea Pappacoda <andrea@pappacoda.it>  Fri, 30 Sep 2022 14:35:40 +0200
+
+zycore-c (1.2.0-1) experimental; urgency=medium
+
+  [ Andrea Pappacoda ]
+  * New upstream version 1.2.0
+  * d/control: libzycore1.1 -> libzycore1.2
+  * d/control: mark Multi-Arch: same
+  * d/patches: drop upstreamed patches
+  * d/tests: add autopkgtests
+  * d/upstream/metadata: add Donation field
+
+  [ Debian Janitor ]
+  * Remove constraints unnecessary since buster
+
+ -- Andrea Pappacoda <andrea@pappacoda.it>  Wed, 14 Sep 2022 13:23:42 +0200
+
+zycore-c (1.1.0-4) unstable; urgency=medium
+
+  * d/control:
+    - use any-arm instead of any-armel and any-armhf also for zycore-dev
+    - add Vcs fields
+    - mark test deps with <!nocheck>
+  * d/rules: add qa=+all option
+  * d/watch: use GitHub's API
+
+ -- Andrea Pappacoda <andrea@pappacoda.it>  Tue, 07 Dec 2021 12:43:25 +0100
+
+zycore-c (1.1.0-3) unstable; urgency=medium
+
+  * d/control: use any-arm instead of any-armel and any-armhf
+
+ -- Andrea Pappacoda <andrea@pappacoda.it>  Tue, 16 Nov 2021 10:21:00 +0100
+
+zycore-c (1.1.0-2) unstable; urgency=medium
+
+  * Source-only reupload
+
+ -- Andrea Pappacoda <andrea@pappacoda.it>  Mon, 15 Nov 2021 21:37:57 +0100
+
+zycore-c (1.1.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * d/control: restrict build to x86 and ARM. Closes: #999494
+  * d/watch: use GitHub tags instead of GitHub releases
+  * d/rules: build and run tests
+
+ -- Andrea Pappacoda <andrea@pappacoda.it>  Fri, 12 Nov 2021 13:15:38 +0100
+
+zycore-c (1.0.0-2) unstable; urgency=medium
+
+  * Backport ZYAN_NO_SANITIZE macro (needed to build Zydis 3.2.1)
+  * Backport ZyanAbsI64() function (needed to build Zydis 3.2.1)
+
+ -- Andrea Pappacoda <andrea@pappacoda.it>  Thu, 11 Nov 2021 12:21:07 +0100
+
+zycore-c (1.0.0-1) unstable; urgency=low
+
+  * Initial release. Closes: #995884
+
+ -- Andrea Pappacoda <andrea@pappacoda.it>  Thu, 07 Oct 2021 18:14:34 +0200

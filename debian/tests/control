@@ -1,0 +1,7 @@
+Tests:
+ cmake,
+Depends:
+ cmake,
+ gcc | c-compiler,
+ libc-dev,
+ @,
